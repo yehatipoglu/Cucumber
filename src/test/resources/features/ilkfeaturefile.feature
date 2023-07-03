@@ -35,3 +35,5 @@ Feature: ilke feature file
   #11. dryRun=false -> dryRun yokmus gibi normal sekilde çalısır.Yanı tum adımları tek tek browserda açar.
   #     dryRun=true -> Yeni bir STEP(adım) eklendiginde sadece tanimlanmamıs step definitionsları olusturmak icin kullanılır.
   #     bunun kullanilma sebebi zamandan tasarrufdur.
+
+  #github için deneme update olup olmadıgını kontrol?
