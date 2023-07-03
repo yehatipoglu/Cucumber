@@ -1,0 +1,53 @@
+**********Cucumber Kurulumu*****************
+-Cucumber page object model için olusturdugumuz klasörler :
+    pages -> page objectler
+    runners -> test caseleri run etmek, raporlar eklemek, feature file ile step definitionsları birlestirmek için
+    step definitions -> java kodları
+    utilities -> reusable metotlar, driver,configreader
+- Cucumber fearure klasorü
+    Tum feature file lar bu klasöre gider.
+    Tum test caseler gherken dilinde klasorde yazılır.
+----------19 Şubar 2023-----------------
+1. Feature file oluştur.ilkfeaturefile.feature
+
+Feature: ilke feature file
+
+  Scenario:TC_01_google_iphone_arama
+
+  Given kullanici google gider
+  When kullanici iphone için arama yapar
+  Then sonuclarda iphone oldugunu dogrular
+
+
+2.Runner classını run et
+3. Alttaki consoldan missing step definitionsları kopyala
+4.stepdefinitions klasorunde GoogleStepDefinitions classı olustur ve oraya yapıştır.
+
+
+@Given("kullanici google gider")
+public void kullanici_google_gider() {
+    // Write code here that turns the phrase above into concrete actions
+
+}
+@When("kullanici iphone için arama yapar")
+public void kullanici_iphone_için_arama_yapar() {
+    // Write code here that turns the phrase above into concrete actions
+
+}
+@Then("sonuclarda iphone oldugunu dogrular")
+public void sonuclarda_iphone_oldugunu_dogrular() {
+    // Write code here that turns the phrase above into concrete actions
+
+}
+kırmızı verilen hataları import et.
+
+5. Step definitionslara gerekli Java kodlarını yaz.
+
+@Given("kullanici google gider")
+public void kullanici_google_gider() {
+driver.getDriver().get(ConfigReader.getProperty("google_url"));
+
+
+}
+
+NOTE: Elementleri bulmak için page paketini kullan.
